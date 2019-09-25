@@ -1,10 +1,14 @@
 const express = require('express');
+const fetch = require('node-fetch');
 const app = express();
-const path = require('path')
 
 app.get('/test', (req, res)=>{
-  res.send('It works')
-})
+  fetch('https://jsonplaceholder.typicode.com/users')
+  .then(res => res.json())
+  .then(json =>{
+    return res.send(json)})
+    .catch(err => console.log(err))
+  })
 
 const PORT = process.env.PORT || 3000;
 

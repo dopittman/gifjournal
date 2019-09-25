@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.19.2"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0"
   }
 }
