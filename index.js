@@ -1,14 +1,17 @@
 const express = require('express');
-const fetch = require('node-fetch');
 const app = express();
 
-app.get('/test', (req, res)=>{
-  fetch('https://jsonplaceholder.typicode.com/users')
-  .then(res => res.json())
-  .then(json =>{
-    return res.send(json)})
-    .catch(err => console.log(err))
-  })
+const users = require('./routes/api/users');
+const logs = require('./routes/api/journal_logs');
+
+const dbURI = require('./config/keys.txt').mongoURI;
+
+app.use('/api/users', users);
+app.use('/api/logs', logs);
+
+
+  //Create new journal logs
+
 
 const PORT = process.env.PORT || 3000;
 
