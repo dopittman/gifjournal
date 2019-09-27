@@ -1,17 +1,11 @@
 const express = require('express');
 const app = express();
-
 const users = require('./routes/api/users');
 const logs = require('./routes/api/journal_logs');
 
-const dbURI = require('./config/keys.txt').mongoURI;
-
+app.use(express.urlencoded({extended: true}));
 app.use('/api/users', users);
 app.use('/api/logs', logs);
-
-
-  //Create new journal logs
-
 
 const PORT = process.env.PORT || 3000;
 
