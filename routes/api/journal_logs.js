@@ -4,7 +4,9 @@ const router = express.Router();
 const Log = require('../../models/Log');
 
 router.get('/', (req, res) => {
-  res.json('GET route for logs');
+  Log.findById(req.body.id)
+    .then((foundLog) => { res.json(foundLog); })
+    .catch((err) => { console.log(err); });
 });
 
 //  Create Journal Log
