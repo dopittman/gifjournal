@@ -1,17 +1,18 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
-const UserSchema = new Schema({
 
-  handle: {
+const LogSchema = new Schema({
+
+  gif: {
     type: String,
     required: true,
   },
-  email: {
+  mood: {
     type: String,
     required: true,
   },
-  password: {
+  blurb: {
     type: String,
     required: true,
   },
@@ -21,6 +22,6 @@ const UserSchema = new Schema({
   },
 });
 
-const User = mongoose.model('users', UserSchema);
+const Log = mongoose.model('logs', LogSchema);
 
-module.exports = User;
+module.exports = Log;
