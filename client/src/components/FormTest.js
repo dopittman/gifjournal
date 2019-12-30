@@ -11,16 +11,14 @@ class FormTest extends React.Component {
     this.createCards = this.createCards.bind(this);
   }
 
+  // Get moods from API
   getGifs(){
     fetch('http://localhost:3005/api/logs/')
       .then((response) => {
-        console.log(response);
         return response})
         .then((res) => {return res.json()})
         .then((jsonres) => {
-          // console.log(jsonres)
          const allCards = this.createCards(jsonres).map((card)=>{
-            console.log(card)
             return card});
         this.setState({json: allCards})})
   }
@@ -36,7 +34,6 @@ class FormTest extends React.Component {
         blurb = {post.blurb}
         />
     })
-    console.log(allGifs);
     return allGifs;
   }
 
