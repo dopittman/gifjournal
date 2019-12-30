@@ -19,15 +19,11 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gifCard {
+  width:20%;
+  height:20%;
+  border: 6px outset gray;
+  background-color: whitesmoke;
+  margin: auto;
+  margin-top: 2em;
 }

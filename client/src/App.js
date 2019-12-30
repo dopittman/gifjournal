@@ -8,6 +8,12 @@ function App() {
     <div className="App">
       <h1>Hello</h1>
       <FormTest />
+      <GifCard
+        gif='giftest'
+        blurb='blurb'
+        mood='mood'
+      />
+      <GifCard />
       <GifCard />
     </div>
   );
