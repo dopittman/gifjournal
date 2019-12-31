@@ -26,7 +26,6 @@ class FormTest extends React.Component {
   //Creates the logs/cards
   createCards(arr){
     const allGifs = arr.map((post, ind)=>{
-      // return console.log(post)
        return <GifCard
         key = {ind}
         gif= {post.gif}

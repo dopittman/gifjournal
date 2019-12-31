@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import FormTest from './components/FormTest'
 import GifCard from './components/GifCard'
+import '../node_modules/uikit/dist/css/uikit.css'
+
 
 function App() {
   return (
@@ -9,12 +11,10 @@ function App() {
       <h1>Hello</h1>
       <FormTest />
       <GifCard
-        gif='giftest'
-        blurb='blurb'
-        mood='mood'
+        gif='Static Test Card'
+        mood='Test mood'
+        blurb='Test Blurb'
       />
-      <GifCard />
-      <GifCard />
     </div>
   );
 }
