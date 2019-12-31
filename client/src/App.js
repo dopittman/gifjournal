@@ -11,11 +11,6 @@ function App() {
     <div className="App">
       <h1>Hello</h1>
       <FormTest />
-      <GifCard
-        gif='Static Test Card'
-        mood='Test mood'
-        blurb='Test Blurb'
-      />
     </div>
   );
 }
