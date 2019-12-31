@@ -38,9 +38,9 @@ class FormTest extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className='uk-container'>
     <button onClick={this.getGifs}>Get JSON</button>
-    <div>{this.state.json.map((card, ind)=> <div key={ind}>{card}</div>)}</div>
+    <div className='uk-grid-medium uk-child-width-1-4@m uk-grid-match uk-grid' uk-grid>{this.state.json.map((card, ind)=> <div key={ind}>{card}</div>)}</div>
     </div>
     )}
 }
