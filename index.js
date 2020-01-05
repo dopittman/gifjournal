@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const users = require('./routes/api/users');
 const logs = require('./routes/api/journal_logs');
 
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api/users', users);
 app.use('/api/logs', logs);

@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
 import FormTest from './components/FormTest'
-import GifCard from './components/GifCard'
 import '../node_modules/uikit/dist/css/uikit.css'
 import '../node_modules/uikit/dist/js/uikit'
+import './App.css';
+
 
 
 function App() {
