@@ -12,7 +12,7 @@ const LogSchema = new Schema({
     type: String,
     required: true,
   },
-  blurb: {
+  comment: {
     type: String,
     required: true,
   },

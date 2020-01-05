@@ -29,6 +29,7 @@ class FormTest extends React.Component {
   getGifs(){
     axios.get(`http://localhost:3005/api/logs/`)
       .then((response) => {
+        console.log(response);
         return response})
         .then((res) => {return res.data})
         .then((jsonres) => {
@@ -41,11 +42,12 @@ class FormTest extends React.Component {
   // Displays the logs/cards
   displayCards(arr){
     const allGifs = arr.map((post, ind)=>{
+      console.log(post)
        return <GifCard
-        key = {ind}
+        key = {post._id}
         gif= {post.gif}
         mood = {post.mood}
-        blurb = {post.blurb}
+        comment = {post.comment}
         />
     })
     return allGifs;
@@ -56,7 +58,7 @@ class FormTest extends React.Component {
     axios.post(`http://localhost:3005/api/logs`, {
     mood: this.state.mood,
     gif: this.state.gif,
-    blurb: this.state.comment
+    comment: this.state.comment
     })
     .catch((err)=>{console.log(err)});
   }

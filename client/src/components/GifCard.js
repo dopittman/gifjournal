@@ -8,7 +8,7 @@ function GifCard (props) {
         <div className='uk-card-badge uk-label badge-happy'>Happy</div>
       </div>
       <h1 className='gifCard-Gif'>{props.gif}</h1>
-      <h3 className='gifCard-Blurb'>{props.blurb}</h3>
+      <h3 className='gifCard-Blurb'>{props.comment}</h3>
     </div>
   )
 }
