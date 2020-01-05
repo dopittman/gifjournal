@@ -25,6 +25,8 @@ router.post('/', (req, res) => {
     mood: req.body.mood,
     blurb: req.body.blurb,
   });
+  console.log('-------------------')
+  console.log(req.body.mood);
   newLog.save()
     .then((user) => res.json(user))
     .catch((err) => console.log(err));

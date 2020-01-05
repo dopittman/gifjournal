@@ -10,11 +10,11 @@ const LogSchema = new Schema({
   },
   mood: {
     type: String,
-    // required: true,
+    required: true,
   },
   blurb: {
     type: String,
-    // required: true,
+    required: true,
   },
   date: {
     type: Date,
