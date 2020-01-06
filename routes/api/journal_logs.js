@@ -29,8 +29,10 @@ router.post('/', (req, res) => {
     .catch((err) => console.log(err));
 });
 
+// Delete route needs to resolve
 router.delete('/', (req, res) => {
   Log.findByIdAndDelete(req.body.id, (err) => { if (err) { console.log(err); } });
 });
+
 
 module.exports = router;

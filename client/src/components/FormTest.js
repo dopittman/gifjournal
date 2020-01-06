@@ -29,7 +29,6 @@ class FormTest extends React.Component {
   getGifs(){
     axios.get(`http://localhost:3005/api/logs/`)
       .then((response) => {
-        console.log(response);
         return response})
         .then((res) => {return res.data})
         .then((jsonres) => {
@@ -45,6 +44,7 @@ class FormTest extends React.Component {
       console.log(post)
        return <GifCard
         key = {post._id}
+        id= {post._id}
         gif= {post.gif}
         mood = {post.mood}
         comment = {post.comment}
@@ -53,7 +53,7 @@ class FormTest extends React.Component {
     return allGifs;
   }
 
-  // Create new journal card
+  // Create New Journal Card
   createCard(){
     axios.post(`http://localhost:3005/api/logs`, {
     mood: this.state.mood,
@@ -62,6 +62,7 @@ class FormTest extends React.Component {
     })
     .catch((err)=>{console.log(err)});
   }
+
 
   // Handle form data
   formChangeHandler= (e) => {
