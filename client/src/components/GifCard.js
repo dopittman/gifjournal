@@ -15,6 +15,13 @@ deleteCard(){
   .catch((err)=>{console.log(err)});
   }
 
+//Edit Journal Card
+updateCard(){
+  axios.put(`http://localhost:3005/api/logs/${this.props.id}`, {data: {
+
+  }});
+  }
+
   render() {
 
     const props = this.props;
@@ -26,6 +33,7 @@ deleteCard(){
       </div>
       <h1 className='gifCard-Gif'>{props.gif}</h1>
       <h3 className='gifCard-Blurb'>{props.comment}</h3>
+      <button onClick=''>Edit</button>
       <button onClick={this.deleteCard}>Delete</button>
     </div>
   }

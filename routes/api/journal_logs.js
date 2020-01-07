@@ -11,11 +11,12 @@ router.get('/', (req, res) => {
     .catch((err) => { console.log(err); });
 });
 
-/* Get One Log
-  Log.find(req.params.id)
-  .then((log)=>{res.json(log)})
-  .catch((err)=>{console.log(err)})
-*/
+// Get One Log
+router.put('/edit/', (req, res) => {
+  Log.find({ _id: req.query.id }, (err) => { if (err) { console.log(err); } })
+    .then((log) => { res.json(log); })
+    .catch((err) => { console.log(err); });
+});
 
 //  Create Journal Log
 router.post('/', (req, res) => {
@@ -34,5 +35,8 @@ router.delete('/', (req, res) => {
   Log.findByIdAndDelete(req.body.id, (err) => { if (err) { console.log(err); } });
 });
 
+router.put('/', (req, res) => {
+  Log.findByIdAndUpdate(req.body.id, (err) => { if (err) {console.log(err); } });
+})
 
 module.exports = router;
