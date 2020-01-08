@@ -36,7 +36,7 @@ router.delete('/', (req, res) => {
 });
 
 router.put('/', (req, res) => {
-  Log.findByIdAndUpdate(req.body.id, (err) => { if (err) {console.log(err); } });
-})
+  Log.findByIdAndUpdate(req.body.id, (err) => { if (err) { console.log(err); } });
+});
 
 module.exports = router;
