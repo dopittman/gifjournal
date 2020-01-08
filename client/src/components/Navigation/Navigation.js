@@ -1,29 +1,14 @@
 import React from 'react';
 
-class Nav extends React.Component {
-  constructor(props){
-    super(props)
-
-    // this.state = {
-    //   hidden: true
-    // }
-  }
-
-  // componentWillReceiveProps(nextProps) {
-  //   this.setState({ hidden: nextProps.navOpen });
-  // }
-
-
-
-  render() {
+const Nav = (props) => {
 
     //Sets class name for actual nav bar
-    let classChange = this.props.navOpen ? 'uk-offcanvas uk-open' : 'uk-offcanvas';
-    let hideBtn = this.props.navOpen ? true : false;
+    let classChange = props.navOpen ? 'uk-offcanvas uk-open' : 'uk-offcanvas';
+    let hideBtn = props.navOpen ? true : false;
 
   return <div>
           <button href="#offcanvas-slide" className="uk-button uk-button-default" uk-toggle='true' hidden={hideBtn}
-          onClick={this.props.toggleNavBar}>
+          onClick={props.toggleNavBar}>
             <span>Open</span>
           </button>
 
@@ -43,6 +28,5 @@ class Nav extends React.Component {
     </div>
   </div>
   }
-}
 
 export default Nav;

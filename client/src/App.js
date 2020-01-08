@@ -1,6 +1,6 @@
 import React from 'react';
 import FormTest from './components/FormTest';
-import Nav from './components/Navigation'
+import Nav from './components/Navigation/Navigation'
 // import '../node_modules/uikit/dist/css/uikit.css';
 // import '../node_modules/uikit/dist/js/uikit';
 import './App.css';
