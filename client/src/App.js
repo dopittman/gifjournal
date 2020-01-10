@@ -1,11 +1,12 @@
 import React from 'react';
+import { render } from 'react-dom';
+import { BrowserRouter} from 'react-router-dom';
+
+import './App.css';
 import FormTest from './components/FormTest';
 import Nav from './components/Navigation/Navigation'
-// import '../node_modules/uikit/dist/css/uikit.css';
-// import '../node_modules/uikit/dist/js/uikit';
-import './App.css';
 import Dashboard from './components/Dashboard/Dashboard';
-import OutsideClicked from './components/OutsideClicked';
+import OutsideClicked from './components/Navigation/OutsideClicked';
 
 
 
@@ -30,17 +31,20 @@ class App extends React.Component {
   render() {
 
     return <div className="App">
+
+    {/* Handles Navigation of site */}
       <OutsideClicked
         navOpen = { this.state.navOpen }
-        toggleNavBar = { this.toggleNavBar }
-      >
+        toggleNavBar = { this.toggleNavBar } >
         <Nav
           navOpen = { this.state.navOpen }
           toggleNavBar = { this.toggleNavBar }
         />
       </OutsideClicked>
 
-      <Dashboard />
+      <BrowserRouter>
+        <Dashboard />
+      <BrowserRouter />
       <FormTest />
     </div>
   }

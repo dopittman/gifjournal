@@ -16,3 +16,9 @@
 .badge-happy {
   background-color:#ff6d05;
 }
+
+.Nav-Close-Btn {
+  float: right;
+  font-weight: bold;
+  cursor: default;
+}

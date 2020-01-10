@@ -33,7 +33,7 @@ updateCard(){
       </div>
       <h1 className='gifCard-Gif'>{props.gif}</h1>
       <h3 className='gifCard-Blurb'>{props.comment}</h3>
-      <button onClick=''>Edit</button>
+      <button>Edit</button>
       <button onClick={this.deleteCard}>Delete</button>
     </div>
   }

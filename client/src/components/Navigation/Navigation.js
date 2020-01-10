@@ -8,15 +8,17 @@ const Nav = (props) => {
 
   return <div>
           <button href="#offcanvas-slide" className="uk-button uk-button-default" uk-toggle='true' hidden={hideBtn}
-          onClick={props.toggleNavBar}>
+          aria-hidden={hideBtn} onClick={props.toggleNavBar}>
             <span>Open</span>
           </button>
 
   <div id="offcanvas-slide" uk-offcanvas='true' className={classChange} style={{display: 'block'}}>
       <div className="uk-offcanvas-bar">
           <ul className="uk-nav uk-nav-default">
+          <span className='Nav-Close-Btn' onClick={props.toggleNavBar}>X</span>
+          <br />
               <li className="uk-active"><a href="#22">Active</a></li>
-              <li><a href="#1">Item</a></li>
+              <li><a href="">Item</a></li>
               <li className="uk-nav-header">Header</li>
               <li><a href="#2">Item</a></li>
               <li><a href="#3">Item</a></li>
