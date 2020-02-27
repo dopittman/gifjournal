@@ -2,6 +2,10 @@ import React from 'react'
 
 import axios from 'axios';
 import GifCard from '../GifCard';
+import MaterialGifCard from '../MaterialCard';
+import { Grid } from '@material-ui/core';
+
+
 
 class Dashboard extends React.Component {
   constructor(props){
@@ -9,6 +13,7 @@ class Dashboard extends React.Component {
 
     this.state = {
       json: [],
+      latestLogs: []
     };
 
   }
@@ -28,7 +33,7 @@ class Dashboard extends React.Component {
   displayCards(arr){
     const allGifs = arr.map((post, ind)=>{
       console.log(post)
-       return <GifCard
+       return <MaterialGifCard
         key = {post._id}
         id= {post._id}
         gif= {post.gif}
@@ -44,13 +49,21 @@ class Dashboard extends React.Component {
   }
 
   render(){
-    return (<div>
+    return (
+    <div>
       <h1> Dashboard!</h1>
-      <div className='uk-grid-medium uk-child-width-1-2@m uk-grid-match uk-grid' uk-grid='true'>
-        {this.state.json.map((card, ind)=> <div key={ind}>{card}</div>)}
-      </div>
-    </div>
+      <Grid
+        container="true"
+        direction="row"
+        spacing="4"
+      >
+        {this.state.json.map((card, ind)=> <Grid item="true" xs="12" sm="6" md="6" lg="4" xl="3" justify="center"
+            key={ind}> {card} 
+          </Grid>
+        )}
 
+      </Grid>
+    </div>
   )}
 }
 

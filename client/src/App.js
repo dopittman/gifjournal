@@ -4,7 +4,8 @@ import { BrowserRouter} from 'react-router-dom';
 
 import './App.css';
 import FormTest from './components/FormTest';
-import Nav from './components/Navigation/Navigation'
+import Nav from './components/Navigation/Navigation';
+import Landing from './components/Landing/Landing'
 import Dashboard from './components/Dashboard/Dashboard';
 import OutsideClicked from './components/Navigation/OutsideClicked';
 
@@ -42,10 +43,11 @@ class App extends React.Component {
         />
       </OutsideClicked>
 
-      <BrowserRouter>
-        <Dashboard />
-      <BrowserRouter />
       <FormTest />
+      <BrowserRouter>
+        <Landing />
+        <Dashboard />
+      </BrowserRouter>
     </div>
   }
 }

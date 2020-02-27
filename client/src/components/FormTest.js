@@ -21,11 +21,7 @@ class FormTest extends React.Component {
     this.formChangeHandler = this.formChangeHandler.bind(this);
   }
 
-  // Add automatic Card retrieval
-  componentDidMount() {
-  }
-
-  // Get gif cards from API
+  // Get gif cards from API 
   getGifs(){
     axios.get(`http://localhost:3005/api/logs/`)
       .then((response) => {

@@ -35,6 +35,7 @@ router.delete('/', (req, res) => {
   Log.findByIdAndDelete(req.body.id, (err) => { if (err) { console.log(err); } });
 });
 
+// Update Route
 router.put('/', (req, res) => {
   Log.findByIdAndUpdate(req.body.id, (err) => { if (err) { console.log(err); } });
 });
