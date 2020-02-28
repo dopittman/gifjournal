@@ -34,14 +34,14 @@ class App extends React.Component {
     return <div className="App">
 
     {/* Handles Navigation of site */}
-      <OutsideClicked
+      {/* <OutsideClicked
         navOpen = { this.state.navOpen }
-        toggleNavBar = { this.toggleNavBar } >
+        toggleNavBar = { this.toggleNavBar } > */}
         <Nav
           navOpen = { this.state.navOpen }
           toggleNavBar = { this.toggleNavBar }
         />
-      </OutsideClicked>
+      {/* </OutsideClicked> */}
 
       <FormTest />
       <BrowserRouter>
