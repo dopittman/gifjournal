@@ -1,0 +1,264 @@
+[33mcommit 002e05f4a350bc8400f6e6cec27591861a7abc26[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Thu Feb 27 21:40:36 2020 -0500
+
+    Add basic MaterialUI Nav
+
+:100644 100644 baa25e6 eb19bdd M	client/.gitignore
+:100644 100644 2f74491 93a5d6e M	client/src/App.js
+:100644 100644 228f5a9 a269742 M	client/src/components/Navigation/Navigation.js
+:100644 100644 1029cea c51729a M	package-lock.json
+:100644 100644 7adb737 af075bd M	package.json
+
+[33mcommit 5d1ff08c42f04141566d0dd8f72fe5cce9dd5905[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Wed Feb 26 20:31:54 2020 -0500
+
+    Update gitignore file to remove test images
+
+:100644 100644 badf3aa 4a0cfcd M	.gitignore
+:100644 100644 4d29575 baa25e6 M	client/.gitignore
+
+[33mcommit e60da82daaade4bc17ee04e2f7fff0e874f37d26[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Wed Feb 26 20:18:51 2020 -0500
+
+    Convert styling to MaterialUI Framework
+
+:100644 100644 1dbcb7d 96196e4 M	client/public/index.html
+:000000 100644 0000000 c08fde5 A	client/public/styles/main.css
+:100644 100644 b9bae0a 2f74491 M	client/src/App.js
+:100644 100644 8ebe90a f6103d7 M	client/src/components/Dashboard/Dashboard.js
+:100644 100644 9c3a069 af3109b M	client/src/components/FormTest.js
+:000000 100644 0000000 5dd6740 A	client/src/components/Landing/Landing.js
+:000000 100644 0000000 957bda3 A	client/src/components/MaterialCard.js
+:100644 100644 74533fa 228f5a9 M	client/src/components/Navigation/Navigation.js
+:000000 100644 0000000 9b81714 A	client/src/test_images/corgi_one.jpeg
+:000000 100644 0000000 2fb19a5 A	client/src/test_images/corgi_three.jpeg
+:000000 100644 0000000 aa6c0d6 A	client/src/test_images/corgi_two.jpeg
+:100644 100644 326697b 1029cea M	package-lock.json
+:100644 100644 e0ac25b 7adb737 M	package.json
+:100644 100644 1b0e36e d0743c2 M	routes/api/journal_logs.js
+
+[33mcommit 0e0ce20316ed2293006ab8fd9f2b7c491f1cb09c[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Fri Jan 10 12:25:22 2020 -0500
+
+    Move BrowerRouter for Dashboard routing
+
+:100644 100644 506cb27 fc549b2 M	client/src/App.css
+:100644 100644 ae01d8b b9bae0a M	client/src/App.js
+:100644 100644 9d3ded2 8ebe90a M	client/src/components/Dashboard/Dashboard.js
+:100644 100644 50ebd22 e9f83ec M	client/src/components/GifCard.js
+:100644 100644 e5619b1 74533fa M	client/src/components/Navigation/Navigation.js
+:100644 100644 01f1e37 01f1e37 R100	client/src/components/OutsideClicked.js	client/src/components/Navigation/OutsideClicked.js
+:100644 100644 9053c97 7891d5a M	client/src/index.js
+
+[33mcommit e324664d3891103849cee6103486e3d2565607e2[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Tue Jan 7 22:16:30 2020 -0500
+
+    Clean up Navigation component
+
+:100644 100644 c4bba3d ae01d8b M	client/src/App.js
+:100644 100644 0d66c2b e5619b1 R065	client/src/components/Navigation.js	client/src/components/Navigation/Navigation.js
+
+[33mcommit ea341524a990d71c825306012bef256120924389[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Tue Jan 7 22:10:17 2020 -0500
+
+    Add Working NavBar
+
+:100644 100644 c59290b 1dbcb7d M	client/public/index.html
+:100644 100644 44c836a c4bba3d M	client/src/App.js
+:000000 100644 0000000 9d3ded2 A	client/src/components/Dashboard/Dashboard.js
+:000000 100644 0000000 0d66c2b A	client/src/components/Navigation.js
+:000000 100644 0000000 01f1e37 A	client/src/components/OutsideClicked.js
+:100644 100644 87d1be5 9053c97 M	client/src/index.js
+:100644 100644 ddd570b 21e4ab9 M	index.js
+:100644 100644 1a0c608 326697b M	package-lock.json
+:100644 100644 1815856 e0ac25b M	package.json
+:100644 100644 2dbc5bd 1b0e36e M	routes/api/journal_logs.js
+:000000 100644 0000000 45fe11e A	routes/pages/dashboard.js
+
+[33mcommit 503a983109d23b382e706e7de5616a0b64ebdaf5[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Mon Jan 6 21:35:15 2020 -0500
+
+    Add PUT route to JournalLogs
+
+:100644 100644 f944d32 50ebd22 M	client/src/components/GifCard.js
+:100644 100644 407750d 2dbc5bd M	routes/api/journal_logs.js
+
+[33mcommit 6e0b671be2748fdf4a3d7a7781fcc2ef4eb8e748[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Sun Jan 5 19:23:38 2020 -0500
+
+    Add working delete button to Journal Card/Log
+
+:100644 100644 1567910 9c3a069 M	client/src/components/FormTest.js
+:100644 100644 af71a2f f944d32 M	client/src/components/GifCard.js
+:100644 100644 117606f 407750d M	routes/api/journal_logs.js
+
+[33mcommit 3429e0e9542b35d5097ecf791ee741dd959e21e7[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Sun Jan 5 17:20:59 2020 -0500
+
+    Create DELETE Route for Journal Logs
+
+:100644 100644 f9a1065 1567910 M	client/src/components/FormTest.js
+:100644 100644 82f8de5 af71a2f M	client/src/components/GifCard.js
+:100644 100644 9751ab7 45d2380 M	models/Log.js
+:100644 100644 1a89352 117606f M	routes/api/journal_logs.js
+
+[33mcommit 6bd8498f589bbe5173ef55526119a4c5513d70b9[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Sun Jan 5 15:35:52 2020 -0500
+
+    Add working POST form
+
+:100644 100644 c42f41c f9a1065 M	client/src/components/FormTest.js
+:100644 100644 d8617fe 9751ab7 M	models/Log.js
+:100644 100644 a96f024 1a89352 M	routes/api/journal_logs.js
+
+[33mcommit 9465b95fef307c29ef55eb48f8d3c371eaafa6d5[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Sat Jan 4 23:45:53 2020 -0500
+
+    Add Axios GET/POST Requests to FormTest
+
+:100644 100644 f0fc6eb 7430103 M	client/package-lock.json
+:100644 100644 8840455 f131e59 M	client/package.json
+:100644 100644 96b6467 c59290b M	client/public/index.html
+:100644 100644 7c10d6a 506cb27 M	client/src/App.css
+:100644 100644 a89c32d 44c836a M	client/src/App.js
+:100644 100644 042b3d2 c42f41c M	client/src/components/FormTest.js
+:100644 100644 070ea54 82f8de5 M	client/src/components/GifCard.js
+:100644 100644 8a4dc11 ddd570b M	index.js
+:100644 100644 9751ab7 d8617fe M	models/Log.js
+:100644 100644 304019f 1815856 M	package.json
+:100644 100644 8b74f6b a96f024 M	routes/api/journal_logs.js
+
+[33mcommit ed02f5076ea6287bd758a5a4a94f63ed12d1ea83[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Mon Dec 30 23:48:12 2019 -0500
+
+    remove static test-GifCard
+
+:100644 100644 6febd12 a89c32d M	client/src/App.js
+:100644 100644 addc2d1 042b3d2 M	client/src/components/FormTest.js
+
+[33mcommit 25c12587ee7f0d59f5bfd7e3110c52a1a29bbf37[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Mon Dec 30 23:43:59 2019 -0500
+
+    Style GifCard prototype
+
+:100644 100644 a77339f 6febd12 M	client/src/App.js
+:100644 100644 53c1889 addc2d1 M	client/src/components/FormTest.js
+:100644 100644 8d40ce3 070ea54 M	client/src/components/GifCard.js
+
+[33mcommit 612eb7097933017f98475f59f06b2c63ea5f4e8e[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Mon Dec 30 22:19:14 2019 -0500
+
+    Add UIKit Card
+
+:100644 100644 a1979d9 f0fc6eb M	client/package-lock.json
+:100644 100644 561b286 8840455 M	client/package.json
+:100644 100644 9e3cc98 96b6467 M	client/public/index.html
+:100644 100644 bc17f43 a77339f M	client/src/App.js
+:100644 100644 4318a5e 53c1889 M	client/src/components/FormTest.js
+:100644 100644 f614fdf 8d40ce3 M	client/src/components/GifCard.js
+
+[33mcommit 8d40020e39c5e8abd240d343a94c1459e1ed8413[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Sun Dec 29 22:00:14 2019 -0500
+
+    Remove unnecessary console logs and comments
+
+:100644 100644 de11f89 4318a5e M	client/src/components/FormTest.js
+
+[33mcommit db74bfef8148a746e6eaeae5d9c643b1fec829d5[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Sun Dec 29 21:51:25 2019 -0500
+
+    Connect GifCard to API in Client/FormTest
+
+:000000 100644 0000000 a1979d9 A	client/package-lock.json
+:100644 100644 fca5253 561b286 M	client/package.json
+:100644 100644 b41d297 7c10d6a M	client/src/App.css
+:100644 100644 d87c83d bc17f43 M	client/src/App.js
+:100644 100644 86fc720 de11f89 M	client/src/components/FormTest.js
+:100644 100644 dc060c9 f614fdf M	client/src/components/GifCard.js
+:100644 100644 0493fca 8a4dc11 M	index.js
+
+[33mcommit 2eb00b54e3467b6ee894407bef6df306b21cf2ac[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Sat Dec 14 16:01:39 2019 -0500
+
+    Create GifCard
+
+:100644 100644 ac74c31 d87c83d M	client/src/App.js
+:000000 100644 0000000 86fc720 A	client/src/components/FormTest.js
+:000000 100644 0000000 dc060c9 A	client/src/components/GifCard.js
+:100644 100644 b8e703b 8b74f6b M	routes/api/journal_logs.js
+
+[33mcommit 36b6875f614f8c46461cf9b112d66b9ec0a6cf9e[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Sun Sep 29 22:46:07 2019 -0400
+
+    Add GET log route
+
+:100644 100644 909cb72 b8e703b M	routes/api/journal_logs.js
+
+[33mcommit d8c41049b247b393b896856002e82bbf84253cb8[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Sun Sep 29 22:34:45 2019 -0400
+
+    Add Log POST Route
+
+:000000 100644 0000000 7e50b4f A	.eslintrc.js
+:100644 100644 8b3f414 0493fca M	index.js
+:000000 100644 0000000 9751ab7 A	models/Log.js
+:100644 100644 f5d208e b87384e M	models/User.js
+:100644 100644 d0f1ea9 1a0c608 M	package-lock.json
+:100644 100644 b7d9d30 304019f M	package.json
+:100644 100644 9b3f99e 909cb72 M	routes/api/journal_logs.js
+:100644 100644 f66acb4 45adb75 M	routes/api/users.js
+
+[33mcommit 2293dc5f05f6352ac7b67003a450ba2addf39e75[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Thu Sep 26 22:44:52 2019 -0400
+
+    Create basic User register route
+
+:100644 100644 89847cd 8b3f414 M	index.js
+:000000 100644 0000000 f5d208e A	models/User.js
+:100644 100644 c2658af d0f1ea9 M	package-lock.json
+:100644 100644 0272655 b7d9d30 M	package.json
+:100644 100644 d513dcd 9b3f99e M	routes/api/journal_logs.js
+:100644 100644 9ef7474 f66acb4 M	routes/api/users.js
+
+[33mcommit 97110e6a4cd3a2f9fe0ebfac15cffdd1c01841ee[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Thu Sep 26 21:34:09 2019 -0400
+
+    Add Routes folder for users/logs
+
+:100644 100644 2a082a0 89847cd M	index.js
+:100644 100644 e5b520c c2658af M	package-lock.json
+:100644 100644 7ccc6b1 0272655 M	package.json
+:000000 100644 0000000 d513dcd A	routes/api/journal_logs.js
+:000000 100644 0000000 9ef7474 A	routes/api/users.js
+
+[33mcommit 4ea4c45f43a1d1c34d6b6a1bb0568f364764232c[m
+Author: David <dpittmancontact@gmail.com>
+Date:   Tue Sep 24 22:16:42 2019 -0400
+
+    Add fetch utility
+
+:100644 100644 90acfa3 badf3aa M	.gitignore
+:100644 100644 33a1d65 2a082a0 M	index.js
+:100644 100644 ba48f5a e5b520c M	package-lock.json
+:100644 100644 b2ba28a 7ccc6b1 M	package.json

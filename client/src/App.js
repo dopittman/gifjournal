@@ -7,11 +7,10 @@ import FormTest from './components/FormTest';
 import Nav from './components/Navigation/Navigation';
 import Landing from './components/Landing/Landing'
 import Dashboard from './components/Dashboard/Dashboard';
-import OutsideClicked from './components/Navigation/OutsideClicked';
 
 
 
-class App extends React.Component {
+class App extends React.Component { 
   constructor(){
     super();
 
