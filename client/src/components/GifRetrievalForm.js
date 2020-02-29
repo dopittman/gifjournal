@@ -1,17 +1,18 @@
 import React from 'react';
-
+import { giphyKey } from '../config/keys';
 
 class GifRetrievalForm extends React.Component {
 
-    getGifs = () => {
-        fetch('https://jsonplaceholder.typicode.com/posts/1')
+    fetchUserGifs = () => {
+        fetch(`https://api.giphy.com/v1/gifs/search?api_key=${giphyKey}&q=orange&limit=25&offset=0&rating=PG-13&lang=en`)
         .then(response => response.json())
         .then(response => console.log(response))
         .catch(err => console.log(err));
     }
 
     componentDidMount() {
-       this.getGifs();
+       this.fetchUserGifs();
+       console.log(`GifKey: ${giphyKey}`);
     }
 
     render(){
