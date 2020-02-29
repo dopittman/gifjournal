@@ -1,9 +1,9 @@
 import React from 'react'
 
 import axios from 'axios';
-import GifCard from '../GifCard';
 import MaterialGifCard from '../MaterialCard';
 import { Grid } from '@material-ui/core';
+import GifCardRetrieval from '../GifRetrievalForm';
 
 
 
@@ -52,10 +52,11 @@ class Dashboard extends React.Component {
     return (
     <div>
       <h1> Dashboard!</h1>
+      <GifCardRetrieval />
       <Grid
-        container="true"
+        container= {true}
         direction="row"
-        spacing="4"
+        spacing={4}
       >
         {this.state.json.map((card, ind)=> <Grid item="true" xs="12" sm="6" md="6" lg="4" xl="3" justify="center"
             key={ind}> {card} 
