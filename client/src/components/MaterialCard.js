@@ -7,7 +7,7 @@ import { CardContent } from '@material-ui/core/';
 import { CardMedia } from '@material-ui/core/';
 import { Button } from '@material-ui/core/';
 import { Typography } from '@material-ui/core/';
-import  CorgiPic1  from '../test_images/corgi_one.jpeg'
+import  CorgiPic1  from '../testimages/corgi_one.jpeg'
 
 const useStyles = makeStyles({
   root: {
@@ -27,10 +27,10 @@ export default function MaterialGifCard( props ) {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Contemplative Reptile"
+          alt= { props.title }
           height="140"
-          image= { CorgiPic1 } // Will be { props.gif }
-          title="Contemplative Reptile"
+          image= { props.gifImage } // Will be { props.gif }
+          title= {props.title}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">

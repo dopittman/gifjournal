@@ -3,4 +3,5 @@
 node_modules
 keys.txt
 /config/keys.txt
-/src/test_images
+/client/src/testimages
+/client/src/config
