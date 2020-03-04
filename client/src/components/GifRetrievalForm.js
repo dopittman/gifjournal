@@ -5,16 +5,36 @@ import { Grid } from '@material-ui/core';
 
 
 class GifRetrievalForm extends React.Component {
+  constructor(props){
+    super(props);
 
-    state = {
-      fetchedGifs: []
+    this.state = {
+      fetchedGifs: [],
+      searchTerm: ''
     }
 
-    fetchUserGifs = () => {
-        fetch(`https://api.giphy.com/v1/gifs/search?api_key=${giphyKey}&q=orange&limit=25&offset=0&rating=PG-13&lang=en`)
+    this.handleChange = this.handleChange.bind(this);
+    this.fetchUserGifs = this.fetchUserGifs.bind(this);
+  }
+
+
+
+    // Fetches gifs from GIPHY API
+    fetchUserGifs = (searchTerm) => {
+        fetch(`https://api.giphy.com/v1/gifs/search?api_key=${giphyKey}&q=${searchTerm}&limit=25&offset=0&rating=PG-13&lang=en`)
         .then(response => response.json())
         .then(response => this.setState({fetchedGifs: response.data}))
         .catch(err => console.log(err));
+    }
+
+
+    handleChange(event) {
+      this.setState({ [event.target.name]: event.target.value });
+    }
+
+    handleSubmit(e) {
+      e.preventDefault();
+      console.log('The link was clicked.');
     }
 
     // Map fetchedGifs state to cards and display them
@@ -29,13 +49,21 @@ class GifRetrievalForm extends React.Component {
     // }
 
     componentDidMount() {
-       this.fetchUserGifs();
+      //  this.fetchUserGifs('red'); // For testing purposes only
     }
 
     render(){
     return (
 
       <div>
+
+      <form onSubmit={this.handleSubmit}>
+        <input type="text" name="searchTerm" placeholder="Search" onChange={this.handleChange} />
+        <button>-></button>
+      </form>
+      <br />
+
+      {/* Place Grid component in a function that shows the grid after search and disappears after one is cliecked */}
       <Grid
         container= {true}
         direction="row"
