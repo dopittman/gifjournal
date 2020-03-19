@@ -57,9 +57,10 @@ class GifRetrievalForm extends React.Component {
 
       <div>
 
+      {/* When submited form will call fetchUserGifs and return results in a grid*/}
       <form onSubmit={this.handleSubmit}>
         <input type="text" name="searchTerm" placeholder="Search" onChange={this.handleChange} />
-        <button>-></button>
+        <button>-></button> 
       </form>
       <br />
 
