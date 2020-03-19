@@ -15,6 +15,7 @@ class GifRetrievalForm extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.fetchUserGifs = this.fetchUserGifs.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
@@ -34,7 +35,8 @@ class GifRetrievalForm extends React.Component {
 
     handleSubmit(e) {
       e.preventDefault();
-      console.log('The link was clicked.');
+      this.fetchUserGifs(this.state.searchTerm);
+      console.log(this.state.fetchedGifs);
     }
 
     // Map fetchedGifs state to cards and display them
