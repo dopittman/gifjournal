@@ -45,9 +45,16 @@ class Dashboard extends React.Component {
   }
 
     deleteCard(cardId) {
+      const currentCards = this.state.json;
+
+      this.setState({json: currentCards.filter((card) => { return card.props.id !== cardId})})
+      console.log(this.state.json);
+      console.log(currentCards);
+      console.log(cardId);
       axios.delete(`http://localhost:3005/api/logs/`, {
         data: {id: cardId}})
       .catch((err)=>{console.log(err)});
+
       }
   
 
