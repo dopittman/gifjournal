@@ -37,7 +37,7 @@ class App extends React.Component {
           toggleNavBar = { this.toggleNavBar }
         />
 
-      <FormTest />
+      {/* <FormTest /> */}
       <BrowserRouter>
         <Landing />
         <Dashboard />

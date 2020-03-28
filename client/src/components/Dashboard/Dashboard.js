@@ -3,8 +3,7 @@ import React from 'react'
 import axios from 'axios';
 import MaterialGifCard from '../MaterialCard';
 import { Grid } from '@material-ui/core';
-import GifCardRetrieval from '../GifRetrievalForm';
-
+import CreateLog from '../Pages/CreateLog'
 
 
 class Dashboard extends React.Component {
@@ -15,7 +14,7 @@ class Dashboard extends React.Component {
       json: [],
       latestLogs: []
     };
-
+      this.deleteCard = this.deleteCard.bind(this);
   }
 
   getGifs(){
@@ -30,7 +29,7 @@ class Dashboard extends React.Component {
         .catch((err)=>{console.log(err)})
   }
 
-  displayCards(arr){
+  displayCards(arr) {
     const allGifs = arr.map((post, ind)=>{
       console.log(post)
        return <MaterialGifCard
@@ -39,10 +38,18 @@ class Dashboard extends React.Component {
         gif= {post.gif}
         mood = {post.mood}
         comment = {post.comment}
+        deleteCard = {this.deleteCard}
         />
     })
     return allGifs;
   }
+
+    deleteCard(cardId) {
+      axios.delete(`http://localhost:3005/api/logs/`, {
+        data: {id: cardId}})
+      .catch((err)=>{console.log(err)});
+      }
+  
 
   componentDidMount(){
     this.getGifs();
@@ -52,13 +59,13 @@ class Dashboard extends React.Component {
     return (
     <div>
       <h1> Dashboard!</h1>
-      <GifCardRetrieval />
+      <CreateLog />
       <Grid
         container= {true}
         direction="row"
         spacing={4}
       >
-        {this.state.json.map((card, ind)=> <Grid item="true" xs="12" sm="6" md="6" lg="4" xl="3" justify="center"
+        {this.state.json.map((card, ind)=> <Grid item={true} xs={12} sm={6} md={6} lg={4} xl={3} justify="center"
             key={ind}> {card} 
           </Grid>
         )}

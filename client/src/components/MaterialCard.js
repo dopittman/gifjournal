@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card } from '@material-ui/core/';
 import { CardActionArea } from '@material-ui/core/';
@@ -12,11 +13,13 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 345,
     margin: "auto",
-  },
-});
+    },
+  });
+
 
 export default function MaterialGifCard( props ) {
   const classes = useStyles();
+
 
   return (
     <Card 
@@ -44,8 +47,8 @@ export default function MaterialGifCard( props ) {
         <Button size="small" color="primary">
           Share
         </Button>
-        <Button size="small" color="primary">
-          Learn More
+        <Button onClick={() => {props.deleteCard(props.id)}} size="small" color="primary">
+          Delete
         </Button>
       </CardActions>
     </Card>
