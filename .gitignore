@@ -1,7 +1,10 @@
 # dependencies
 /client/node_modules
 node_modules
-keys.txt
+
+#  API and Database Keys are in Config
 /config/keys.txt
+keys.txt
+
 /client/src/testimages
-/client/src/config
+/client/src/confign

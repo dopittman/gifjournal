@@ -22,7 +22,7 @@ export default function MaterialGifCard( props ) {
 
 
   return (
-    <Card 
+    <Card
       className={classes.root}
       elevation = {6}
         >
@@ -52,5 +52,5 @@ export default function MaterialGifCard( props ) {
         </Button>
       </CardActions>
     </Card>
-  );
+  )
 }

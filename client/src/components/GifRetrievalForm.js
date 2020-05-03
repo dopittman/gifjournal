@@ -11,7 +11,7 @@ class GifRetrievalForm extends React.Component {
     this.state = {
       fetchedGifs: [],
       searchTerm: ''
-    }
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.fetchUserGifs = this.fetchUserGifs.bind(this);
@@ -26,7 +26,7 @@ class GifRetrievalForm extends React.Component {
         .then(response => response.json())
         .then(response => this.setState({fetchedGifs: response.data}))
         .catch(err => console.log(err));
-    }
+    };
 
 
     handleChange(event) {
@@ -62,7 +62,7 @@ class GifRetrievalForm extends React.Component {
       {/* When submited form will call fetchUserGifs and return results in a grid*/}
       <form onSubmit={this.handleSubmit}>
         <input type="text" name="searchTerm" placeholder="Search" onChange={this.handleChange} />
-        <button>-></button> 
+        <button>-></button>
       </form>
       <br />
 

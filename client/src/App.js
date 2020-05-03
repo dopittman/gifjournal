@@ -16,7 +16,7 @@ class App extends React.Component {
 
     this.state = {
       navOpen: false
-    }
+    };
 
     this.toggleNavBar = this.toggleNavBar.bind(this)
   }
@@ -24,7 +24,7 @@ class App extends React.Component {
   toggleNavBar(){
     if(this.state.navOpen === false){
     this.setState({navOpen: true})} else {
-      this.setState({navOpen: false});
+      this.setState({navOpen: false})
     }
   };
 

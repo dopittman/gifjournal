@@ -30,7 +30,7 @@ export default function TemporaryDrawer() {
       return;
     }
 
-    setState({ ...state, [side]: open });
+    setState({ ...state, [side] : open });
   };
 
   const sideList = side => (
@@ -58,7 +58,7 @@ export default function TemporaryDrawer() {
         ))}
       </List>
     </div>
-  );
+  )
 
   const fullList = side => (
     <div
@@ -85,14 +85,14 @@ export default function TemporaryDrawer() {
         ))}
       </List>
     </div>
-  );
+  )
 
   return (
     <div>
-      <Button onClick={toggleDrawer('left', true)}>Open Left</Button>
+      <Button onClick={toggleDrawer('left', true)}>Open; Left</Button>
       <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
         {sideList('left')}
       </Drawer>
     </div>
-  );
+  )
 }

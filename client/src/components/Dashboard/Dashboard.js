@@ -40,22 +40,27 @@ class Dashboard extends React.Component {
         comment = {post.comment}
         deleteCard = {this.deleteCard}
         />
-    })
+    });
     return allGifs;
   }
 
     deleteCard(cardId) {
+
+      // Replace 'confirm' function with a custom modal to disable 'Prevent additional dialog boxes from showing up' option
+      const confirm = window.confirm("Are you sure?");
+
+      if(confirm === true) {
       const currentCards = this.state.json;
 
-      this.setState({json: currentCards.filter((card) => { return card.props.id !== cardId})})
+      this.setState({json: currentCards.filter((card) => { return card.props.id !== cardId})});
       console.log(this.state.json);
       console.log(currentCards);
       console.log(cardId);
       axios.delete(`http://localhost:3005/api/logs/`, {
         data: {id: cardId}})
       .catch((err)=>{console.log(err)});
-
-      }
+      } 
+    }
   
 
   componentDidMount(){
