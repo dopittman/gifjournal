@@ -1,5 +1,7 @@
 import React from 'react';
+import MoodSelector from '../CardComponents/MoodSelector'
 import GifRetrievalForm from '../GifRetrievalForm';
+import axios from 'axios';
 
 class CreateLog extends React.Component {
     constructor(){
@@ -11,11 +13,15 @@ class CreateLog extends React.Component {
         }
 
         this.createCard = this.createCard.bind(this);
+        this.formChangeHandler = this.formChangeHandler.bind(this);
+        this.updateUserGif = this.updateUserGif.bind(this);
+
     }
 
       // Create New Journal Card
+      // Change to fecth request eventually
   createCard(){
-    fetch.post(`http://localhost:3005/api/logs`, {
+    axios.post(`http://localhost:3005/api/logs`, {
     mood: this.state.mood,
     gif: this.state.gif,
     comment: this.state.comment
@@ -23,19 +29,41 @@ class CreateLog extends React.Component {
     .catch((err)=>{console.log(err)});
   }
 
-
-
-
   // Handle form data
   formChangeHandler= (e) => {
     this.setState({ [e.target.name]:e.target.value });
   }
 
+  updateUserGif(gifURL){
+    this.setState({ gif: gifURL })
+  }
+
     render(){
         return(
-            <div>
+            <div className="">
                 <h1>This is the Create New Page</h1>
-                <GifRetrievalForm />
+                <form onSubmit={()=>{this.createCard()}}>
+                    <div className='form-area'>
+                        
+                        <label>Mood:</label>
+                        <div>
+
+                        </div>
+                        
+                        <input type='text' name='mood' value={this.state.mood} onChange={this.formChangeHandler}></input> <br />
+                        <label>Gif</label>
+                        <img src={this.state.gif} />
+                        <br />
+                        <label>Comment</label>
+                        <textarea name='comment' value={this.state.comment} onChange={this.formChangeHandler}></textarea>
+                        <br/>
+                        <input type="submit" value="Submit" />                    
+                    </div>
+                </form>
+
+                <GifRetrievalForm 
+                    updateUserGif = { this.updateUserGif }
+                />
             </div>
         )
     }

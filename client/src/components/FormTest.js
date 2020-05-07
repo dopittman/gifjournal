@@ -68,7 +68,7 @@ class FormTest extends React.Component {
   render() {
     return(
       <div className='uk-container'>
-      <form>
+      <form onSubmit={()=>{this.createCard()}}>
         <div className='form-area'>
         <label>Mood:</label>
           <input type='text' name='mood' value={this.state.mood} onChange={this.formChangeHandler}></input> <br />
@@ -77,6 +77,7 @@ class FormTest extends React.Component {
           <br />
           <label>Comment</label>
           <textarea name='comment' value={this.state.comment} onChange={this.formChangeHandler}></textarea>
+          <input type="submit" />
         </div>
       </form>
 

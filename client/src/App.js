@@ -1,12 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter} from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link} from 'react-router-dom';
 
 import './App.css';
 import FormTest from './components/FormTest';
 import Nav from './components/Navigation/Navigation';
 import Landing from './components/Landing/Landing'
 import Dashboard from './components/Dashboard/Dashboard';
+import CreateLog from './components/Pages/CreateLog'
 
 
 
@@ -39,8 +40,25 @@ class App extends React.Component {
 
       {/* <FormTest /> */}
       <BrowserRouter>
-        <Landing />
-        <Dashboard />
+      <div>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/Create">Create</Link>
+        </li>
+      </ul>
+
+      <Switch>
+      <Route path="/Create">
+          <CreateLog />
+        </Route>
+        <Route path="/" >
+          <Dashboard />
+        </Route>
+      </Switch>
+      </div>
       </BrowserRouter>
     </div>
   }

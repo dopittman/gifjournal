@@ -2,6 +2,7 @@ import React from 'react';
 import { giphyKey } from '../config/keys';
 import MaterialCard from './MaterialCard';
 import { Grid } from '@material-ui/core';
+import GiphyCard from './GiphyCard';
 
 
 class GifRetrievalForm extends React.Component {
@@ -16,6 +17,7 @@ class GifRetrievalForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.fetchUserGifs = this.fetchUserGifs.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.clearGifGrid = this.clearGifGrid.bind(this);
   }
 
 
@@ -36,7 +38,14 @@ class GifRetrievalForm extends React.Component {
     handleSubmit(e) {
       e.preventDefault();
       this.fetchUserGifs(this.state.searchTerm);
+      this.setState({ searchTerm: '' });
+
       console.log(this.state.fetchedGifs);
+    }
+
+    clearGifGrid(){
+      this.setState({fetchedGifs: []})
+
     }
 
     // Map fetchedGifs state to cards and display them
@@ -61,7 +70,11 @@ class GifRetrievalForm extends React.Component {
 
       {/* When submited form will call fetchUserGifs and return results in a grid*/}
       <form onSubmit={this.handleSubmit}>
-        <input type="text" name="searchTerm" placeholder="Search" onChange={this.handleChange} />
+        <input type= "text" name= "searchTerm"
+        placeholder= "Search" 
+        onChange= { this.handleChange } 
+        value= {this.state.searchTerm} 
+        />
         <button>-></button>
       </form>
       <br />
@@ -69,15 +82,17 @@ class GifRetrievalForm extends React.Component {
       {/* Place Grid component in a function that shows the grid after search and disappears after one is cliecked */}
       <Grid
         container= {true}
-        direction="row"
-        spacing={4}
+        direction= "row"
+        spacing= {4}
       >
         {this.state.fetchedGifs.map((gif, ind)=> <Grid item="true" xs="12" sm="6" md="6" lg="4" xl="3" justify="center"
             key={ind} >  
-            <MaterialCard
+            <GiphyCard
               key= {gif.id}
               title= {gif.title}
               gifImage= {gif.images.fixed_height.url}
+              updateUserGif = {this.props.updateUserGif}
+              clearGifGrid = {this.clearGifGrid}
               />
 
           </Grid>

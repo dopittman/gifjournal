@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card } from '@material-ui/core/';
 import { CardActionArea } from '@material-ui/core/';
@@ -31,7 +30,7 @@ export default function MaterialGifCard( props ) {
           component="img"
           alt= { props.title }
           height="140"
-          image= { props.gifImage }
+          image= { props.gif }
           title= {props.title}
         />
         <CardContent>

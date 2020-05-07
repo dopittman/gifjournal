@@ -71,7 +71,6 @@ class Dashboard extends React.Component {
     return (
     <div>
       <h1> Dashboard!</h1>
-      <CreateLog />
       <Grid
         container= {true}
         direction="row"
