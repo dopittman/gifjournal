@@ -6,3 +6,23 @@ body{
 .borderbox {
     border: 5px solid red;  
 }
+
+/* Mood Selector Component */
+
+.mood-selector {
+    margin:auto;
+}
+
+.mood-selector-happy {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.mood-selector-neutral {
+}
+
+.mood-selector-sad {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+

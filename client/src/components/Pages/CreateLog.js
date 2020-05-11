@@ -14,8 +14,9 @@ class CreateLog extends React.Component {
 
         this.createCard = this.createCard.bind(this);
         this.formChangeHandler = this.formChangeHandler.bind(this);
-        this.updateUserGif = this.updateUserGif.bind(this);
-
+        this.updateUserGif = this.updateUserGif.bind(this); 
+        this.updateUserMood = this.updateUserMood.bind(this); 
+        
     }
 
       // Create New Journal Card
@@ -34,6 +35,10 @@ class CreateLog extends React.Component {
     this.setState({ [e.target.name]:e.target.value });
   }
 
+  updateUserMood(mood){
+      this.setState({ mood: mood });
+  }
+
   updateUserGif(gifURL){
     this.setState({ gif: gifURL })
   }
@@ -45,19 +50,20 @@ class CreateLog extends React.Component {
                 <form onSubmit={()=>{this.createCard()}}>
                     <div className='form-area'>
                         
-                        <label>Mood:</label>
                         <div>
-
+                          <MoodSelector 
+                            updateUserMood = {this.updateUserMood}
+                          />
                         </div>
                         
-                        <input type='text' name='mood' value={this.state.mood} onChange={this.formChangeHandler}></input> <br />
-                        <label>Gif</label>
                         <img src={this.state.gif} />
                         <br />
                         <label>Comment</label>
                         <textarea name='comment' value={this.state.comment} onChange={this.formChangeHandler}></textarea>
                         <br/>
-                        <input type="submit" value="Submit" />                    
+                        <input type="submit" value="Submit" />
+
+   
                     </div>
                 </form>
 
