@@ -31,12 +31,14 @@ class App extends React.Component {
 
   render() {
 
-    return <div className="App">
+    return <div className= "App" >
 
+        <div className = "navigation-bar" >
         <Nav
           navOpen = { this.state.navOpen }
           toggleNavBar = { this.toggleNavBar }
         />
+        </div>
 
       {/* <FormTest /> */}
       <BrowserRouter>

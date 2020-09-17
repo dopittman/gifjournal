@@ -7,4 +7,5 @@ node_modules
 keys.txt
 
 /client/src/testimages
-/client/src/confign
+/client/src/config
+client/src/config/keys.json

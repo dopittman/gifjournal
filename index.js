@@ -13,7 +13,7 @@ app.use('/api/logs', logs);
 app.use('/pages/dashboard', dashboard);
 
 //  mongoDB URI
-const dbURI = require('./config/keys.txt').mongoURI;
+const dbURI = require('./config/keys.json').mongoURI;
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {

@@ -3,7 +3,6 @@ import React from 'react'
 import axios from 'axios';
 import MaterialGifCard from '../MaterialCard';
 import { Grid } from '@material-ui/core';
-import CreateLog from '../Pages/CreateLog'
 
 
 class Dashboard extends React.Component {
@@ -70,7 +69,7 @@ class Dashboard extends React.Component {
   render(){
     return (
     <div>
-      <h1> Dashboard!</h1>
+      <h1> Dashboard! </h1>
       <Grid
         container= {true}
         direction="row"

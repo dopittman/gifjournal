@@ -6,3 +6,32 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/************* Header Bar Styles *************/
+.navigation-bar {
+  background-color: chartreuse;
+}
+
+
+/************* Dashboard Styles *************/
+
+MuiCardMedia-media{
+  height:100%;
+}
+
+
+/************* Mood Selector Styles *************/
+
+.MoodSelector {
+padding: 20px;
+border-radius: 5px;
+
+-webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+-moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+}
+
+/* Testing class for mood buttons */
+.active{
+  background-color: black;
+}

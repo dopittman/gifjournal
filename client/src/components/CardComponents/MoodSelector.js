@@ -6,7 +6,7 @@ import { makeStyles, createStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 const MoodSelector = (props) => {
-    
+    const [activeMood, setActive] = useState("");
     
     // Styles
     const useStyles = makeStyles({
@@ -36,6 +36,9 @@ const MoodSelector = (props) => {
             '&:hover': {
                 background: "#ff1f1f",
             }
+        },
+        active: {
+            background: "#F655F1"
         }
         
       });
@@ -52,8 +55,8 @@ const MoodSelector = (props) => {
           alignItems="center" >
 
                 <Grid item>
-                <div className = { `${ classes.root } ${ classes.happy } mood-selector-happy` }
-                       onClick = { () => { props.updateUserMood('happy') } }>
+                <div className = { { activeMood } === "happy" ? `${ classes.root } ${ classes.happy } ${classes.active} mood-selector-happy` : `${ classes.root } ${ classes.happy } mood-selector-happy`  }
+                       onClick = { () => { props.updateUserMood('happy'); setActive("happy"); console.log({activeMood}) } }>
                   <HappyFace />
                 </div>
                 </Grid>

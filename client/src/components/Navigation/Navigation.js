@@ -43,6 +43,7 @@ export default function TemporaryDrawer() {
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem button key={text}>
+            {/* Place array indexs below to get icon for navigation if I decide to use them */}
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
@@ -60,6 +61,7 @@ export default function TemporaryDrawer() {
     </div>
   )
 
+  //check google/materialUI docs to see what this is
   const fullList = side => (
     <div
       className={classes.fullList}
@@ -88,7 +90,7 @@ export default function TemporaryDrawer() {
   )
 
   return (
-    <div>
+    <div className = "nav-drawer" >
       <Button onClick={toggleDrawer('left', true)}>Open Left</Button>
       <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
         {sideList('left')}
