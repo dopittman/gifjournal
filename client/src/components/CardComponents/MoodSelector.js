@@ -14,7 +14,13 @@ const MoodSelector = (props) => {
             height: '100px',
             width: '100px',
             padding: '2rem',
-            margin: '0'
+            margin: '0',
+            transition:'all .5s ease',
+            color:'#41403E',
+            outline:'none',
+            boxShadow: '20px 38px 34px -26px hsla(0,0%,0%,.2)',
+            borderRadius: '255px 15px 225px 15px/15px 225px 15px 255px',
+            border: 'solid 2px #41403E'
         },
         neutral: {
             fill: 'white',
@@ -38,13 +44,20 @@ const MoodSelector = (props) => {
             }
         },
         active: {
-            background: "#F655F1"
+            transition:'all .5s ease',
+            color:'#41403E',
+            outline:'none',
+            boxShadow: '20px 38px 34px -26px hsla(0,0%,0%,.2)',
+            borderRadius: '255px 15px 225px 15px/15px 225px 15px 255px',
+            borderRadius: '50%',
+            border: 'solid 8px #41403E'
         }
         
       });
       const classes = useStyles();
 
 
+      // Mood Selector Component
     return(
 
         <div className='MoodSelector' >
@@ -54,25 +67,34 @@ const MoodSelector = (props) => {
           justify="center"
           alignItems="center" >
 
+                {/*  Happy Face Button  */}
                 <Grid item>
-                <div className = { { activeMood } === "happy" ? `${ classes.root } ${ classes.happy } ${classes.active} mood-selector-happy` : `${ classes.root } ${ classes.happy } mood-selector-happy`  }
-                       onClick = { () => { props.updateUserMood('happy'); setActive("happy"); console.log({activeMood}) } }>
+                <div className = {  activeMood  === "happy" ? `${ classes.root } ${ classes.happy } ${classes.active} mood-selector-happy` : `${ classes.root } ${ classes.happy } mood-selector-happy`  }
+                       onClick = { () => { 
+                           props.updateUserMood('happy'); 
+                           setActive("happy"); 
+                           console.log(activeMood =="happy"); console.log({activeMood}) } }>
                   <HappyFace />
                 </div>
                 </Grid>
 
+                {/*  Neutral Face Button  */}
                 <Grid item>
-                <div className = { `${ classes.root } ${ classes.neutral }` }
-                       onClick = { () => { props.updateUserMood('neutral') } }>
+                <div className = {  activeMood  === "neutral" ? `${ classes.root } ${ classes.neutral } ${classes.active} mood-selector-neutral` : `${ classes.root } ${ classes.neutral } mood-selector-neutral`  }
+                       onClick = { () => { 
+                           props.updateUserMood('neutral'); 
+                           setActive("neutral"); } }>
                   <NeutralFace />
                 </div>
                 </Grid>
 
+                {/*  Sad Face Button  */}
+
                 <Grid item>
-                <div className = { `${ classes.root } ${ classes.sad } mood-selector-sad` } 
+                <div className = {  activeMood  === "sad" ? `${ classes.root } ${ classes.sad } ${classes.active} mood-selector-sad` : `${ classes.root } ${ classes.sad } mood-selector-sad`  }
                        onClick = { () => { 
-                           console.log('clicked')
-                           return props.updateUserMood('sad') } }>
+                           props.updateUserMood('sad');
+                           setActive("sad") } }>
                     <SadFace />
                     </div>
                 </Grid>
