@@ -75,7 +75,7 @@ class GifRetrievalForm extends React.Component {
         onChange= { this.handleChange } 
         value= {this.state.searchTerm} 
         />
-        <button>-></button>
+        <button>{"->"}</button>
       </form>
       <br />
 

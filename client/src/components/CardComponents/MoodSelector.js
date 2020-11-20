@@ -8,13 +8,13 @@ import Grid from '@material-ui/core/Grid';
 const MoodSelector = (props) => {
     const [activeMood, setActive] = useState("");
     
-    // Styles
+    // MoodSelector Styles
     const useStyles = makeStyles({
         root: {
-            height: '100px',
-            width: '100px',
+            height: '2rem',
+            width: '2rem',
             padding: '2rem',
-            margin: '0',
+            margin: 'auto',
             transition:'all .5s ease',
             color:'#41403E',
             outline:'none',
@@ -61,14 +61,15 @@ const MoodSelector = (props) => {
     return(
 
         <div className='MoodSelector' >
-          <Grid container 
-          spacing={0} 
+          <Grid container
+          display='flex' 
+          spacing={1} 
           direction="row"
           justify="center"
           alignItems="center" >
 
                 {/*  Happy Face Button  */}
-                <Grid item>
+                <Grid item='true' lg="2">
                 <div className = {  activeMood  === "happy" ? `${ classes.root } ${ classes.happy } ${classes.active} mood-selector-happy` : `${ classes.root } ${ classes.happy } mood-selector-happy`  }
                        onClick = { () => { 
                            props.updateUserMood('happy'); 
@@ -79,7 +80,7 @@ const MoodSelector = (props) => {
                 </Grid>
 
                 {/*  Neutral Face Button  */}
-                <Grid item>
+                <Grid item='true' lg="2">
                 <div className = {  activeMood  === "neutral" ? `${ classes.root } ${ classes.neutral } ${classes.active} mood-selector-neutral` : `${ classes.root } ${ classes.neutral } mood-selector-neutral`  }
                        onClick = { () => { 
                            props.updateUserMood('neutral'); 
@@ -90,7 +91,7 @@ const MoodSelector = (props) => {
 
                 {/*  Sad Face Button  */}
 
-                <Grid item>
+                <Grid item='true' lg="2">
                 <div className = {  activeMood  === "sad" ? `${ classes.root } ${ classes.sad } ${classes.active} mood-selector-sad` : `${ classes.root } ${ classes.sad } mood-selector-sad`  }
                        onClick = { () => { 
                            props.updateUserMood('sad');
