@@ -13,16 +13,14 @@ body{
     margin:auto;
 }
 
-.mood-selector-happy {
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
+.mood-selector-happy {  
+
 }
 
 .mood-selector-neutral {
 }
 
 .mood-selector-sad {
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
+
 }
 
