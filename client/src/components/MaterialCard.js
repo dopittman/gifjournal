@@ -29,7 +29,7 @@ export default function MaterialGifCard( props ) {
         <CardMedia
           component="img"
           alt= { props.title }
-          height="140"
+          height="240"
           image= { props.gif }
           title= {props.title}
         />

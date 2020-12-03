@@ -7,20 +7,21 @@ body{
     border: 5px solid red;  
 }
 
-/* Mood Selector Component */
 
-.mood-selector {
-    margin:auto;
+/* GifRetrievalForm Styles*/
+
+.gif-search-input {
+    width: 15%;
+    height: 2rem;
+    background-color: white;
+    text-align: center;
+    font-size: larger;
+    border: 1px solid lightblue;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: none;
 }
 
-.mood-selector-happy {  
-
+.gif-search-input:focus {
+    
 }
-
-.mood-selector-neutral {
-}
-
-.mood-selector-sad {
-
-}
-

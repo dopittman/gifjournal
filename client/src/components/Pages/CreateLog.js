@@ -51,13 +51,21 @@ class CreateLog extends React.Component {
                     <div className='form-area'>
                         
                         <div>
+
+                          {/* Mood Selector Faces/Buttons */}
                           <MoodSelector 
                             updateUserMood = {this.updateUserMood}
                           />
                         </div>
-                        
+
+                          {/* Retrieves Gifs from GIPHY API */}
+                          <GifRetrievalForm 
+                            updateUserGif = { this.updateUserGif }
+                          />
                         <img src={this.state.gif} />
                         <br />
+
+                        {/* Area for user's comment submission */}
                         <label>Comment</label>
                         <textarea name='comment' value={this.state.comment} onChange={this.formChangeHandler}></textarea>
                         <br/>
@@ -67,9 +75,7 @@ class CreateLog extends React.Component {
                     </div>
                 </form>
 
-                <GifRetrievalForm 
-                    updateUserGif = { this.updateUserGif }
-                />
+
             </div>
         )
     }

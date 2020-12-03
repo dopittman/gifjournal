@@ -48,19 +48,7 @@ class GifRetrievalForm extends React.Component {
 
     }
 
-    // Map fetchedGifs state to cards and display them
-    // displayFetchedGifs = () => {
-    //   this.state.fetchedGifs.map((gif)=>{
-    //     return <MaterialCard
-    //       key= {gif.id}
-    //       alt= {gif.title}
-    //       gifImage= {gif.images.fixed_height.url}
-    //     />
-    //   });
-    // }
-
     componentDidMount() {
-      //  this.fetchUserGifs('red'); // For testing purposes only
     }
 
     render(){
@@ -70,12 +58,15 @@ class GifRetrievalForm extends React.Component {
 
       {/* When submited form will call fetchUserGifs and return results in a grid*/}
       <form onSubmit={this.handleSubmit}>
-        <input type= "text" name= "searchTerm"
-        placeholder= "Search" 
+        <input 
+        className= "gif-search-input"
+        type= "text" 
+        name= "searchTerm"
+        placeholder= "Search for GIFs.." 
         onChange= { this.handleChange } 
         value= {this.state.searchTerm} 
         />
-        <button>{"->"}</button>
+        <button className= "gif-search-button">{"->"}</button>
       </form>
       <br />
 

@@ -3,7 +3,6 @@ import { render } from 'react-dom';
 import { BrowserRouter, Switch, Route, Link} from 'react-router-dom';
 
 import './App.css';
-import FormTest from './components/FormTest';
 import Nav from './components/Navigation/Navigation';
 import Landing from './components/Landing/Landing'
 import Dashboard from './components/Dashboard/Dashboard';
@@ -56,7 +55,7 @@ class App extends React.Component {
       <Route path="/Create">
           <CreateLog />
         </Route>
-        <Route path="/" >
+        <Route path="/dashboard" >
           <Dashboard />
         </Route>
       </Switch>
