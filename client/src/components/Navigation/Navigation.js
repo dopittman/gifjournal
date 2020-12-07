@@ -9,6 +9,9 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+
 
 const useStyles = makeStyles({
   list: {
@@ -91,7 +94,11 @@ export default function TemporaryDrawer() {
 
   return (
     <div className = "nav-drawer" >
-      <Button onClick={toggleDrawer('left', true)}>Open Left</Button>
+      <Button onClick={toggleDrawer('left', true)}>
+        <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon />
+        </IconButton>
+      </Button>
       <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
         {sideList('left')}
       </Drawer>

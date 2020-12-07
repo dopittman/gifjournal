@@ -3,7 +3,8 @@ import { render } from 'react-dom';
 import { BrowserRouter, Switch, Route, Link} from 'react-router-dom';
 
 import './App.css';
-import Nav from './components/Navigation/Navigation';
+import Nav from './components/Navigation/NavigationBar';
+import NavTest from './components/Navigation/Navigation';
 import Landing from './components/Landing/Landing'
 import Dashboard from './components/Dashboard/Dashboard';
 import CreateLog from './components/Pages/CreateLog'
@@ -14,18 +15,6 @@ class App extends React.Component {
   constructor(){
     super();
 
-    this.state = {
-      navOpen: false
-    };
-
-    this.toggleNavBar = this.toggleNavBar.bind(this)
-  }
-
-  toggleNavBar(){
-    if(this.state.navOpen === false){
-    this.setState({navOpen: true})} else {
-      this.setState({navOpen: false})
-    }
   };
 
   render() {
@@ -33,10 +22,7 @@ class App extends React.Component {
     return <div className= "App" >
 
         <div className = "navigation-bar" >
-        <Nav
-          navOpen = { this.state.navOpen }
-          toggleNavBar = { this.toggleNavBar }
-        />
+        <Nav />
         </div>
 
       {/* <FormTest /> */}
@@ -55,7 +41,7 @@ class App extends React.Component {
       <Route path="/Create">
           <CreateLog />
         </Route>
-        <Route path="/dashboard" >
+        <Route path="/" >
           <Dashboard />
         </Route>
       </Switch>
