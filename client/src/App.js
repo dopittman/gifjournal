@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route, Link} from 'react-router-dom';
 
 import './App.css';
 import Nav from './components/Navigation/NavigationBar';
-import NavTest from './components/Navigation/Navigation';
+import NavTest from './components/Navigation/NavigationHamburger';
 import Landing from './components/Landing/Landing'
 import Dashboard from './components/Dashboard/Dashboard';
 import CreateLog from './components/Pages/CreateLog'

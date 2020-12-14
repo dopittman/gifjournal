@@ -11,7 +11,6 @@ const MoodSelector = (props) => {
     // MoodSelector Styles
     const useStyles = makeStyles({
         root: {
-
             padding: '20%',
             margin: 'auto',
             transition:'all .5s ease',
@@ -73,7 +72,7 @@ const MoodSelector = (props) => {
                        onClick = { () => { 
                            props.updateUserMood('happy'); 
                            setActive("happy"); 
-                           console.log(activeMood =="happy"); console.log({activeMood}) } }>
+                           console.log(activeMood === "happy"); console.log({activeMood}) } }>
                   <HappyFace 
                   className="mood-selector-happy"/>
                 </div>
