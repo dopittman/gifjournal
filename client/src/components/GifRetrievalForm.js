@@ -3,6 +3,7 @@ import { giphyKey } from '../config/keys';
 import MaterialCard from './MaterialCard';
 import { Grid } from '@material-ui/core';
 import GiphyCard from './GiphyCard';
+import GifSearchBar from './GifSearchBar/GifSearchBar'
 
 
 class GifRetrievalForm extends React.Component {
@@ -55,19 +56,11 @@ class GifRetrievalForm extends React.Component {
     return (
 
       <div>
-
-      {/* When submited form will call fetchUserGifs and return results in a grid*/}
-      <form onSubmit={this.handleSubmit}>
-        <input 
-        className= "gif-search-input"
-        type= "text" 
-        name= "searchTerm"
-        placeholder= "Search for GIFs.." 
-        onChange= { this.handleChange } 
-        value= {this.state.searchTerm} 
+        <GifSearchBar 
+        handleSubmit = {this.handleSubmit}
+        handleChange = {this.handleChange}
+        value = {this.state.searchTerm}
         />
-        <button className= "gif-search-button">{"->"}</button>
-      </form>
       <br />
 
       {/* Place Grid component in a function that shows the grid after search and disappears after one is cliecked */}
