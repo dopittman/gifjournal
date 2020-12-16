@@ -67,15 +67,17 @@ class Dashboard extends React.Component {
   }
 
   render(){
+
     return (
     <div>
       <h1> Dashboard! </h1>
-      <Grid
+      <Grid 
         container= {true}
         direction="row"
-        spacing={4}
+        spacing={0}
       >
-        {this.state.json.map((card, ind)=> <Grid item={true} xs={12} sm={6} md={6} lg={4} xl={3} justify="center"
+        
+        {this.state.json.map((card, ind)=> <Grid item={true} xs={10} sm={6} md={6} lg={4} xl={3} className="dashboard-card"
             key={ind}> {card} 
           </Grid>
         )}

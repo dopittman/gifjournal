@@ -12,6 +12,7 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 345,
     margin: "auto",
+    marginBottom: "14px",
     },
   });
 
@@ -23,7 +24,7 @@ export default function MaterialGifCard( props ) {
   return (
     <Card
       className={classes.root}
-      elevation = {6}
+      elevation={2}
         >
       <CardActionArea>
         <CardMedia
