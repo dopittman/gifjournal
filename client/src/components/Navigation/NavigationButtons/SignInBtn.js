@@ -9,10 +9,12 @@ const useStyles = makeStyles(() => ({
         color: '#fff',
         backgroundColor: 'rgba(300,300,300,.18)',
         borderRadius: '16.5px',
+        marginRight: '8px',
         paddingLeft: '16px',
         paddingRight: '12px',
         padding: '.3rem',
         textTransform: 'none',
+        minWidth: 'max-content',
         '&:hover': {
             background: 'rgba(300,300,300,.5)',
       },
