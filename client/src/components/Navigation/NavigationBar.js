@@ -29,11 +29,13 @@ export default function(){
    return( <div className={classes.root}>
         <AppBar position="static">
         <Toolbar>
-          {/* Title / Logo */}
+
           <Grid container>
+
+          {/* Title / Logo */}
             <Grid item md={10} sm={9} >
               <Typography align='left' variant="h6" className={ classes.title }>
-            GIFJournal
+            gifJournal
             </Typography>
             </Grid>
 

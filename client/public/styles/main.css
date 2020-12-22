@@ -14,23 +14,6 @@ body{
     /* Used !important to override materialUI's item styling, only other solution seems to be overriding with React Hooks per MUI Docs */
 }
 
-/* GifRetrievalForm Styles*/
-
-.gif-search-input {
-    width: 15%;
-    height: 2rem;
-    background-color: white;
-    text-align: center;
-    font-size: larger;
-    border: 1px solid lightblue;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-right: none;
-}
-
-.gif-search-input:focus {
-    
-}
 
 /*******************  Navigation Bar Styles *******************/
 
@@ -50,3 +33,7 @@ body{
     -webkit-transform: translateX(5px);
     transform: translateX(5px);
   }
+
+
+
+  
