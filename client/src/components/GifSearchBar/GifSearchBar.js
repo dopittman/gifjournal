@@ -58,6 +58,7 @@ return( <div classeName= { classes.searchContainer } >
             <SearchIcon className={classes.searchIcon}/> 
                 <input 
                 className= {classes.searchBar}
+                aria-label= 'Search Bar'
                 type= "text" 
                 name= "searchTerm"
                 placeholder= "Search for GIFs.." 

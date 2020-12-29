@@ -10,12 +10,14 @@ class CreateLog extends React.Component {
             mood: '',
             gif: '',
             comment: '',
+            title:''
         }
 
         this.createCard = this.createCard.bind(this);
         this.formChangeHandler = this.formChangeHandler.bind(this);
         this.updateUserGif = this.updateUserGif.bind(this); 
         this.updateUserMood = this.updateUserMood.bind(this); 
+        this.updateGifTitle = this.updateGifTitle.bind(this);
         
     }
 
@@ -43,6 +45,10 @@ class CreateLog extends React.Component {
     this.setState({ gif: gifURL })
   }
 
+  updateGifTitle(gifTitle){
+    this.setState({ title: gifTitle })
+  }
+
     render(){
         return(
             <div className="">
@@ -61,15 +67,15 @@ class CreateLog extends React.Component {
                           {/* Retrieves Gifs from GIPHY API */}
                           <GifRetrievalForm 
                             updateUserGif = { this.updateUserGif }
+                            updateGifTitle = { this.updateGifTitle }
                           />
-                        <img src={this.state.gif} />
+                        <img src={this.state.gif} alt={this.state.title}/>
                         <br />
 
                         {/* Area for user's comment submission */}
-                        <label>Comment</label>
-                        <textarea name='comment' value={this.state.comment} onChange={this.formChangeHandler}></textarea>
+                        <textarea aria-label='user comment' value={this.state.comment} onChange={this.formChangeHandler} ></textarea>
                         <br/>
-                        <input type="submit" value="Submit" />
+                        <button type='submit'><span>Submit</span></button>
 
    
                     </div>

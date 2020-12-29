@@ -18,7 +18,7 @@ export default function GiphyCard( props ) {
 
   return (
     <Card
-    onClick={() => {props.updateUserGif(props.gifImage); props.clearGifGrid()}}
+    onClick={() => {props.updateUserGif(props.gifImage); props.updateGifTitle(props.title); props.clearGifGrid()}}
 
       className={classes.root}
       elevation = {6} 

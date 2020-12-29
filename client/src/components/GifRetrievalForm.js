@@ -75,7 +75,8 @@ class GifRetrievalForm extends React.Component {
               key= {gif.id}
               title= {gif.title}
               gifImage= {gif.images.fixed_height.url}
-              updateUserGif = {this.props.updateUserGif}
+              updateUserGif = { this.props.updateUserGif }
+              updateGifTitle = { this.props.updateGifTitle }
               clearGifGrid = {this.clearGifGrid}
               />
 
