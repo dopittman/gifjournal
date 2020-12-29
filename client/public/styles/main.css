@@ -34,6 +34,16 @@ body{
     transform: translateX(5px);
   }
 
+/* Create page Styles */
 
+.user-comment-textarea {
+    border: 1px solid #4287f5;
+    border-radius: 5px;
+    font-size: larger;
+    margin: 10px;
+    background-color: white;
+    width: 20rem;
+    height: 5rem;
+}
 
   

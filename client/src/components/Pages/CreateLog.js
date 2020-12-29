@@ -73,7 +73,9 @@ class CreateLog extends React.Component {
                         <br />
 
                         {/* Area for user's comment submission */}
-                        <textarea aria-label='user comment' value={this.state.comment} onChange={this.formChangeHandler} ></textarea>
+                        <textarea className='user-comment-textarea' aria-label='user comment' placeholder="Right now I'm feeling..." value={this.state.comment} onChange={this.formChangeHandler} >
+
+                        </textarea>
                         <br/>
                         <button type='submit'><span>Submit</span></button>
 

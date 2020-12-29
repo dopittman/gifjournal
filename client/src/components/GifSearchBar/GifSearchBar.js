@@ -31,8 +31,8 @@ const GifSearchBar = (props) => {
             border: '1px solid #4287f5',
             borderRadius: '16.5px',
             paddingLeft: '2.5rem',
-            paddingRight: '15%',
             margin: '4px',
+            marginRight: '1.6rem'
         },
         submitButton: {
             position: 'absolute',
