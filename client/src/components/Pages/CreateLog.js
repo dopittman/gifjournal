@@ -2,6 +2,9 @@ import React from 'react';
 import MoodSelector from '../CardComponents/MoodSelector'
 import GifRetrievalForm from '../GifRetrievalForm';
 import axios from 'axios';
+import Button from '@material-ui/core/Button';
+import SaveAltIcon from '@material-ui/icons/SaveAlt';
+
 
 class CreateLog extends React.Component {
     constructor(){
@@ -77,7 +80,13 @@ class CreateLog extends React.Component {
 
                         </textarea>
                         <br/>
-                        <button type='submit'><span>Submit</span></button>
+                        <Button
+                        variant='contained'
+                        className='log-submit-button'
+                        startIcon={ <SaveAltIcon /> }
+                        >
+                        Submit
+                        </Button>
 
    
                     </div>

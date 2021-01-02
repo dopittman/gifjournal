@@ -46,4 +46,10 @@ body{
     height: 5rem;
 }
 
+/* Create Log Styles */
+
+.log-submit-button{
+    color: white !important;
+    background-color: #4287f5 !important;
+}
   

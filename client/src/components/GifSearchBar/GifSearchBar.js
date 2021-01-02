@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 
-import { Grid, TextareaAutosize } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
-
-
 
 const GifSearchBar = (props) => {
 
