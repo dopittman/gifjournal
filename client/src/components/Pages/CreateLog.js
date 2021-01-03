@@ -1,6 +1,7 @@
 import React from 'react';
 import MoodSelector from '../CardComponents/MoodSelector'
 import GifRetrievalForm from '../GifRetrievalForm';
+import UserSelectedGif from '../CreateLogComponents/UserSelectedGif'
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import SaveAltIcon from '@material-ui/icons/SaveAlt';
@@ -10,10 +11,14 @@ class CreateLog extends React.Component {
     constructor(){
         super()
         this.state = {
+          //  Will be sent to the GifJtouan API/Database
             mood: '',
             gif: '',
             comment: '',
-            title:''
+            title:'',
+
+            //  Show/Hide the user's selected gif
+            userSelectedGif: false,
         }
 
         this.createCard = this.createCard.bind(this);
@@ -21,6 +26,7 @@ class CreateLog extends React.Component {
         this.updateUserGif = this.updateUserGif.bind(this); 
         this.updateUserMood = this.updateUserMood.bind(this); 
         this.updateGifTitle = this.updateGifTitle.bind(this);
+        this.updateUserSelectedGif = this.updateUserSelectedGif.bind(this);
         
     }
 
@@ -36,7 +42,7 @@ class CreateLog extends React.Component {
   }
 
   // Handle form data
-  formChangeHandler= (e) => {
+  formChangeHandler = (e) => {
     this.setState({ [e.target.name]:e.target.value });
   }
 
@@ -50,6 +56,10 @@ class CreateLog extends React.Component {
 
   updateGifTitle(gifTitle){
     this.setState({ title: gifTitle })
+  }
+
+  updateUserSelectedGif(){
+    this.setState({userSelectedGif: true})
   }
 
     render(){
@@ -71,9 +81,16 @@ class CreateLog extends React.Component {
                           <GifRetrievalForm 
                             updateUserGif = { this.updateUserGif }
                             updateGifTitle = { this.updateGifTitle }
+                            updateUserSelectedGif = { this.updateUserSelectedGif }
                           />
-                        <img src={this.state.gif} alt={this.state.title}/>
+
                         <br />
+                        <UserSelectedGif 
+                            gif = { this.state.gif }
+                            title = { this.state.title }
+                            userSelectedGif = { this.state.userSelectedGif}
+                            key= { this.state.userSelectedGif }
+                          />
 
                         {/* Area for user's comment submission */}
                         <textarea className='user-comment-textarea' aria-label='user comment' placeholder="Right now I'm feeling..." value={this.state.comment} onChange={this.formChangeHandler} >

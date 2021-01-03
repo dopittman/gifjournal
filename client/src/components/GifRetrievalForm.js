@@ -3,7 +3,7 @@ import { giphyKey } from '../config/keys';
 import MaterialCard from './MaterialCard';
 import { Grid } from '@material-ui/core';
 import GiphyCard from './GiphyCard';
-import GifSearchBar from './GifSearchBar/GifSearchBar'
+import GifSearchBar from './CreateLogComponents/GifSearchBar'
 
 
 class GifRetrievalForm extends React.Component {
@@ -77,6 +77,7 @@ class GifRetrievalForm extends React.Component {
               gifImage= {gif.images.fixed_height.url}
               updateUserGif = { this.props.updateUserGif }
               updateGifTitle = { this.props.updateGifTitle }
+              updateUserSelectedGif = { this.props.updateUserSelectedGif}
               clearGifGrid = {this.clearGifGrid}
               />
 
