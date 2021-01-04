@@ -20,6 +20,7 @@ router.put('/edit/', (req, res) => {
 
 //  Create Journal Log
 router.post('/', (req, res) => {
+  console.log(req.body)
   const newLog = new Log({
     gif: req.body.gif,
     mood: req.body.mood,

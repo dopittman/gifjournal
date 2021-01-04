@@ -38,6 +38,7 @@ class CreateLog extends React.Component {
     gif: this.state.gif,
     comment: this.state.comment
     })
+    .then(res => {console.log(res)})
     .catch((err)=>{console.log(err)});
   }
 
@@ -93,11 +94,12 @@ class CreateLog extends React.Component {
                           />
 
                         {/* Area for user's comment submission */}
-                        <textarea className='user-comment-textarea' aria-label='user comment' placeholder="Right now I'm feeling..." value={this.state.comment} onChange={this.formChangeHandler} >
+                        <textarea className='user-comment-textarea' aria-label='user comment' placeholder="Right now I'm feeling..."  name = 'comment' value= {this.state.comment} onChange={this.formChangeHandler} >
 
                         </textarea>
                         <br/>
                         <Button
+                        type='submit'
                         variant='contained'
                         className='log-submit-button'
                         startIcon={ <SaveAltIcon /> }
