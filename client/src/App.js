@@ -4,7 +4,6 @@ import { BrowserRouter, Switch, Route, Link} from 'react-router-dom';
 
 import './App.css';
 import Nav from './components/Navigation/NavigationBar';
-import NavTest from './components/Navigation/NavigationHamburger';
 import Landing from './components/Landing/Landing'
 import Dashboard from './components/Dashboard/Dashboard';
 import CreateLog from './components/Pages/CreateLog'
@@ -25,7 +24,6 @@ class App extends React.Component {
         <Nav />
         </div>
 
-      {/* <FormTest /> */}
       <BrowserRouter>
       <div>
       <ul>
@@ -35,13 +33,16 @@ class App extends React.Component {
         <li>
           <Link to="/Create">Create</Link>
         </li>
+        <li>
+          <Link to="/Dashboard">Dashboard</Link>
+        </li>
       </ul>
 
       <Switch>
       <Route path="/Create">
           <CreateLog />
         </Route>
-        <Route path="/" >
+        <Route path="/Dashboard" >
           <Dashboard />
         </Route>
       </Switch>

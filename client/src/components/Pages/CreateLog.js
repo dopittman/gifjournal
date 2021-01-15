@@ -38,9 +38,10 @@ class CreateLog extends React.Component {
     gif: this.state.gif,
     comment: this.state.comment
     })
-    .then(res => {console.log(res)})
-    .catch((err)=>{console.log(err)});
+    .catch((err)=>{console.log(err.response)});
   }
+
+  // Handle errors received
 
   // Handle form data
   formChangeHandler = (e) => {
@@ -62,6 +63,15 @@ class CreateLog extends React.Component {
   updateUserSelectedGif(){
     this.setState({userSelectedGif: true})
   }
+
+  // Testing button purposes only
+  handleClick(e) {
+    e.preventDefault();
+    console.log('Button was clicked');
+  }
+
+
+
 
     render(){
         return(
@@ -99,6 +109,7 @@ class CreateLog extends React.Component {
                         </textarea>
                         <br/>
                         <Button
+                        onClick={this.handleClick}
                         type='submit'
                         variant='contained'
                         className='log-submit-button'
