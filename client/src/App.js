@@ -4,9 +4,9 @@ import { BrowserRouter, Switch, Route, Link} from 'react-router-dom';
 
 import './App.css';
 import Nav from './components/Navigation/NavigationBar';
-import Landing from './components/Landing/Landing'
 import Dashboard from './components/Dashboard/Dashboard';
 import CreateLog from './components/Pages/CreateLog'
+import Landing from './components/Landing/Landing'
 
 
 
@@ -36,6 +36,9 @@ class App extends React.Component {
         <li>
           <Link to="/Dashboard">Dashboard</Link>
         </li>
+        <li>
+          <Link to="/Landing">Landing</Link>
+        </li>
       </ul>
 
       <Switch>
@@ -44,6 +47,9 @@ class App extends React.Component {
         </Route>
         <Route path="/Dashboard" >
           <Dashboard />
+        </Route>
+        <Route path="/Landing" >
+          <Landing />
         </Route>
       </Switch>
       </div>
