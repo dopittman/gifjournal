@@ -2,12 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { Grid, Slide } from '@material-ui/core';
 
-import Button from '@material-ui/core/Button'
-import SignInBtn from './NavigationButtons/SignInBtn'
+import Button from '@material-ui/core/Button';
+import SignInBtn from './NavigationButtons/SignInBtn';
+import {ReactComponent as Logo} from '../../Images/Logo/gifJournal-NavBar.svg';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -15,8 +15,11 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   title: {
-    flexGrow: 1,
-    marginLeft: '3%',
+    position: 'absolute',
+    left: '-1%',
+    top: '-8%',
+    width: '300',
+    height: '100'
   },
 }));
 
@@ -34,9 +37,9 @@ export default function(){
 
           {/* Title / Logo */}
             <Grid item md={10} sm={9} >
-              <Typography align='left' variant="h6" className={ classes.title }>
-            gifJournal
-            </Typography>
+              <Logo 
+              className = {classes.title}
+              />
             </Grid>
 
           {/* Top-Level Nav Buttons */}
