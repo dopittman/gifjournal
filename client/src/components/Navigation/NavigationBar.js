@@ -36,20 +36,20 @@ export default function(){
           <Grid container>
 
           {/* Title / Logo */}
-            <Grid item md={10} sm={9} >
+            <Grid item md={10} sm={8} >
               <Logo 
               className = {classes.title}
               />
             </Grid>
 
           {/* Top-Level Nav Buttons */}
-          <Grid item md={1} sm={1}>
+          <Grid item md={1} sm={2} xs={3}>
             <Button className='try-it-button' variant='text' color="inherit">
                     Try It!
             </Button>
             </Grid>
 
-            <Grid item md={1} sm={2} >
+            <Grid item md={1} sm={2} xs={3}>
             < SignInBtn />
             </Grid>
 

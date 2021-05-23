@@ -4,6 +4,10 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
+import cardImg from '../../../../Images/dashboardImages/1x/CircleCardImg.png';
+import HappyFace from '../../../../Images/dashboardImages/1x/HealthySmile.png';
+import LibraryCards from '../../../../Images/dashboardImages/1x/LibraryCards.png';
+
 
 const styles = (theme) => ({
   root: {
@@ -24,7 +28,7 @@ const styles = (theme) => ({
     padding: theme.spacing(0, 5),
   },
   image: {
-    height: 55,
+    height: 105,
   },
   title: {
     marginTop: theme.spacing(5),
@@ -43,57 +47,37 @@ function ProductValues(props) {
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
-        <img
-          src="/static/themes/onepirate/productCurvyLines.png"
-          className={classes.curvyLines}
-          alt="curvy lines"
-        />
         <Grid container spacing={5}>
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
-              <img
-                className={classes.image}
-                src="/static/themes/onepirate/productValues1.svg"
-                alt="suitcase"
-              />
+              <img src= {cardImg} alt="Cards" className={classes.image}/>
               <Typography variant="h6" className={classes.title}>
-                The best luxury hotels
+                Your Memories, <br /> Your Gifs
               </Typography>
               <Typography variant="h5">
-                {'From the latest trendy boutique hotel to the iconic palace with XXL pool'}
-                {', go for a mini-vacation just a few subway stops away from your home.'}
+                {'gifJournal allows you to quickly and easily save your favorite memories, experiences, and random thoughts with a few quick taps. With access to millions of gifs from Giphy there is guranteed to be one to match your mood!'}
               </Typography>
             </div>
           </Grid>
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
-              <img
-                className={classes.image}
-                src="/static/themes/onepirate/productValues2.svg"
-                alt="graph"
-              />
+              <img src= {HappyFace} alt= 'Happy Face' className={classes.image} />
               <Typography variant="h6" className={classes.title}>
-                New experiences
+                Journaling for Your Health
               </Typography>
               <Typography variant="h5">
-                {'Privatize a pool, take a Japanese bath or wake up in 900m2 of garden… '}
-                {'your Sundays will not be alike.'}
+                {'Daily journaling has been shown to lower mental stress, anxiety, and increase feelings of well being. Having a place to place your thoughts can help keep your mind organized and free to focus on the important things.'}
               </Typography>
             </div>
           </Grid>
           <Grid item xs={12} md={4}>
             <div className={classes.item}>
-              <img
-                className={classes.image}
-                src="/static/themes/onepirate/productValues3.svg"
-                alt="clock"
-              />
+            <img src= {LibraryCards} alt= 'Set of Cards' className={classes.image} />
               <Typography variant="h6" className={classes.title}>
-                Exclusive rates
+                An Animated Library of Memories
               </Typography>
               <Typography variant="h5">
-                {'By registering, you will access specially negotiated rates '}
-                {'that you will not find anywhere else.'}
+                {'Relive your memories as you travel back though your journal logs and see the gifs you selected to remember your important experiences. '}
               </Typography>
             </div>
           </Grid>
