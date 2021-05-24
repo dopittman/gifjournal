@@ -6,7 +6,7 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { Grid, Slide } from '@material-ui/core';
 
 import Button from '@material-ui/core/Button';
-import SignInBtn from './NavigationButtons/SignInBtn';
+import SignInBtn from '../AuthComponents/SignInBtn';
 import {ReactComponent as Logo} from '../../Images/Logo/gifJournal-NavBar.svg';
 
 

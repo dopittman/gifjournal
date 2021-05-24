@@ -5,8 +5,9 @@ import { BrowserRouter, Switch, Route, Link} from 'react-router-dom';
 import './App.css';
 import Nav from './components/Navigation/NavigationBar';
 import Dashboard from './components/Dashboard/Dashboard';
-import CreateLog from './components/Pages/CreateLog'
-import Landing from './components/Landing/Landing'
+import CreateLog from './components/Pages/CreateLog';
+import Landing from './components/Landing/Landing';
+import Navbar from './components/AuthComponents/navbar';
 
 
 
@@ -22,6 +23,7 @@ class App extends React.Component {
 
         <div className = "navigation-bar" >
         <Nav />
+        <Navbar />
         </div>
 
       <BrowserRouter>
@@ -39,6 +41,7 @@ class App extends React.Component {
         <li>
           <Link to="/Landing">Landing</Link>
         </li>
+        
       </ul>
 
       <Switch>

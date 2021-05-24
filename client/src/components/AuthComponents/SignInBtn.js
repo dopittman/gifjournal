@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -25,18 +27,18 @@ const useStyles = makeStyles(() => ({
     const [isHovered, setIsHovered] = useState(false);
 
     const classes = useStyles();
+    const { loginWithRedirect } = useAuth0();
+
 
     return (
         <Button 
+            onClick={() => loginWithRedirect()}
             onMouseEnter={() => { setIsHovered(true) } }
             onMouseLeave={() => { setIsHovered(false)} }
         className={`${classes.loginBtn} hvr-forward hvr-forward:hover hvr-forward:focus hvr-forward:active .hvr-forward-moved`} color='inherit'>
             Sign In <ChevronRightIcon  />
         </ Button>
 
-        /* 
-        <div className={isHovered === true ? 'hvr-forward hvr-forward:hover hvr-forward:focus hvr-forward:active .hvr-forward-moved ' : 'hvr-forward'}>
-        */ 
     )
 }
 
