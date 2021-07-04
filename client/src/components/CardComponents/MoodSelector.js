@@ -18,7 +18,7 @@ const MoodSelector = (props) => {
             outline:'none',
             boxShadow: '20px 38px 34px -26px hsla(0,0%,0%,.2)',
             borderRadius: '255px 15px 225px 15px/15px 225px 15px 255px',
-            border: 'solid 2px #41403E'
+            border: 'solid 5px #41403E'
         },
         neutral: {
             fill: 'white',
@@ -46,9 +46,8 @@ const MoodSelector = (props) => {
             color:'#41403E',
             outline:'none',
             boxShadow: '20px 38px 34px -26px hsla(0,0%,0%,.2)',
-            borderRadius: '255px 15px 225px 15px/15px 225px 15px 255px',
             borderRadius: '50%',
-            border: 'solid 3px #41403E'
+            border: 'solid 10px #41403E'
         },
         activeNeutral: {
             backgroundColor: '#facf25',

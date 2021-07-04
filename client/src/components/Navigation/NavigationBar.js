@@ -6,7 +6,8 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { Grid, Slide } from '@material-ui/core';
 
 import Button from '@material-ui/core/Button';
-import SignInBtn from '../AuthComponents/SignInBtn';
+import SignInBtn from '../Navigation/NavigationButtons/SignInBtn';
+import AuthenticationButton from '../AuthComponents/authentication-button';
 import {ReactComponent as Logo} from '../../Images/Logo/gifJournal-NavBar.svg';
 
 
@@ -50,7 +51,7 @@ export default function(){
             </Grid>
 
             <Grid item md={1} sm={2} xs={3}>
-            < SignInBtn />
+            <AuthenticationButton />
             </Grid>
 
 

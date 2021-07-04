@@ -23,7 +23,6 @@ class App extends React.Component {
 
         <div className = "navigation-bar" >
         <Nav />
-        <Navbar />
         </div>
 
       <BrowserRouter>
